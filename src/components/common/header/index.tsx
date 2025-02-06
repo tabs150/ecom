@@ -1,8 +1,5 @@
-import { MenuIcon, ShoppingCart } from 'lucide-react'
 import Link from 'next/link'
-
-import { Button } from '@/components/ui/button'
-
+import Menu from './menu'
 
 const Header = async () => {
   return (
@@ -13,19 +10,7 @@ const Header = async () => {
             APP_NAME
           </Link>
         </div>
-        <div className="space-x-2">
-          <Button asChild variant="ghost">
-            <Link href="/cart">
-              <ShoppingCart />
-              Cart
-            </Link>
-          </Button>
-          <Button asChild>
-            <Link href="/cart">
-              Sign In
-            </Link>
-          </Button>
-        </div>
+        <Menu />
       </div>
     </header>
   )
